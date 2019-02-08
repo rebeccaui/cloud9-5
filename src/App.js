@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 // import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import logo from './cloud9-5-logo.png';
-// import border from './cloud-separator.png';
 import './App.css';
 
 // import API from "../../utils/API";
@@ -63,22 +62,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className="cloud95">
+        <header className="cloud95-home">
+          <img src={logo} className="cloud95-logo" alt="logo" />
+          <h1>Cloud 9-5</h1>
+          <p><strong>Weather, you like it or not?!</strong></p>
           <div className="blueBorder"></div>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+        <div className="cloud95-today">
+          hi
+        </div>
       </div>
     );
   }
