@@ -1,1 +1,0 @@
-make background on home screen reflect current weather conditions
