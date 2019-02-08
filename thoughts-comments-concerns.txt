@@ -1,0 +1,21 @@
+ideas
+============
+make background on home screen reflect current weather conditions
+get weather related sky events
+weather alerts
+
+
+to do
+============
+axios call for component on load function
+    current weather = single large card
+    search by city name / zipcode
+    5 day weather = single medium card
+    radar = maps'n'shit
+
+cheerio scrape
+    weather puns / jokes but we should be punny
+
+ui
+    main navigation - 4 links - sticky - anchors
+
