@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavBar from './components/NavBar'
 // import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import logo from './cloud9-5-logo.png';
 import './App.css';
@@ -63,14 +64,29 @@ class App extends Component {
   render() {
     return (
       <div className="cloud95">
-        <header className="cloud95-home">
+        <NavBar />
+      
+        <header className="cloud95-home" id="home">
           <img src={logo} className="cloud95-logo" alt="logo" />
           <h1>Cloud 9-5</h1>
           <p><strong>Weather, you like it or not?!</strong></p>
-          <div className="blueBorder"></div>
+          <div className="topBorder"></div>
         </header>
-        <div className="cloud95-today">
-          hi
+        <div className="cloud95-today" id="today">
+          today
+          <div className="bottomBorder"></div>
+        </div>
+        <div className="cloud95-forecast">
+          forecast
+          <div className="topBorder"></div>
+        </div>
+        <div className="cloud95-radar">
+          radar
+          <div className="bottomBorder"></div>
+        </div>
+        <div className="cloud95-puns">
+          puns
+          <div className="topBorder"></div>
         </div>
       </div>
     );
