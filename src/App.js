@@ -20,6 +20,11 @@ class App extends Component {
     super(props)
     this.state = {
       weatherArray: [],
+      zipcode: '',
+      todayCurrentTemp: '',
+      todayHigh: '',
+      todayLow: '',
+
     }
 
     
@@ -44,14 +49,18 @@ class App extends Component {
 
   //An axios call to retrieve weather information from the OpenWeather API
   getWeather() {
-    // axios.get('/api/weather')
-    // .then(res => {
-    //   for(let i = 0; i < res.length; i++) {
-    //     this.state.weatherArray.push({
-
-    //     })
-    //   }
-    // })
+    axios.get('api.openweathermap.org/data/2.5/weather?zip=' + zipcode)
+    .then(res => {
+      for(let i = 0; i < res.data.length; i++) {
+        this.state.weatherArray.push({
+          weatherArray: [],
+          zipcode: '',
+          todayCurrentTemp: '',// res.data[i].location.coordinates[0],
+          todayHigh: '',
+          todayLow: '',
+        })
+      }
+    })
   }
 
   //Load the weather object into the page's state
