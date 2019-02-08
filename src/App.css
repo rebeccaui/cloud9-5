@@ -3,8 +3,17 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  /* animation: App-logo-spin infinite 20s linear; */
+  /* height: 40vmin; */
+  max-width: 300px;
+}
+
+.blueBorder {
+  background-image: url('./cloud-separator-blue-top.jpg');
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-repeat: repeat-x;
 }
 
 .App-header {
@@ -17,11 +26,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
+/* 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -29,4 +34,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
