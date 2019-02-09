@@ -32,13 +32,13 @@ class App extends Component {
     this.state = {
       weatherArray: [],
       zipcode: '',
-      coordinates: {},
+      coordinates: '',
+      todaySummary: [],
       todayCurrentTemp: '',
       todayHigh: '',
       todayLow: '',
       todayPressure: '',
       todayHumidity: '',
-      todaySummary: [],
       todayIcon: '',
     }
 
@@ -66,29 +66,38 @@ class App extends Component {
     this.getWeather(this.state.zipcode);
   }
 
+
   //An axios call to retrieve weather information from the OpenWeather API
   getWeather(zipcode) {
     const key = process.env.REACT_APP_OPEN_WEATHER_API;
     console.log(key);
-    axios.get('https://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&APPID=' + key)
-    .then(res => {
-      for(let i = 0; i < res.data.length; i++) {
-        this.setState.weatherArray.push({
-          coordinates: res.data[i].coord,
-          todayCurrentTemp: res.data[i].main.temp,
-          todayHigh: res.data[i].main.temp_max,
-          todayLow: res.data[i].main.temp_min,
-          todayPressure: res.data[i].main.pressure,
-          todayHumidity: res.data[i].main.humidity,
-          todaySummary: res.data[i].main.weather,
-          todayIcon: res.data.weather[0].icon,
+    axios.get('https://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&APPID=' + key).then(res => {
+      // for(let i = 0; i < res.data.length; i++) {
+        this.setState({
+          weatherArray: res.data,
+          coordinates: res.data.coord,
+          todaySummary: res.data.weather,
+          todayCurrentTemp: res.data.main.temp,
+          todayHigh: res.data.main.temp_max,
+          todayLow: res.data.main.temp_min,
+          todayPressure: res.data.main.pressure,
+          todayHumidity: res.data.main.humidity,
+          todayIcon: res.data.weather[0].icon
         })
-      }
+      // }
+    // }).then(function(res) {
       console.log('weather results bullshit');
       console.log(res);
+      console.log(res.data.weather[0].icon);
+
       // console.log(res.data.weather[0].icon); // grabs result icon #
       console.log(this.state.weatherArray);
-    })
+      console.log(this.state.todaySummary);
+      console.log(this.state.todayHumidity);
+      console.log(this.state.todayIcon);
+    // }).catch(function (error) {
+    //   console.log(error);
+     });   
   }
 
   render() {
