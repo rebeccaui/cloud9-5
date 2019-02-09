@@ -101,12 +101,12 @@ class App extends Component {
           <h1>Cloud 9-5</h1>
           <p><strong>Weather, you like it or not?!</strong></p>
           <br />
-          <form onSubmit={this.handleSubmit}>
+          <form className="zipForm" onSubmit={this.handleSubmit}>
               <label>
                 Zip Code: 
-                <input type="text" value={this.state.zipcode} onChange={this.handleChange} />
               </label>
-              <input type="submit" value="Submit" />
+              <input id="field" type="text" value={this.state.zipcode} onChange={this.handleChange} />
+              <input id="submit" type="submit" value="Submit" />
             </form>
 
           <div className="topBorder"></div>

@@ -6,8 +6,9 @@ const NavBar = () => {
     return(
         <div className="topNav">
             <AppBar position="static">
-                <Toolbar>
+                <Toolbar className="navBar">
                     <Typography variant="title" color="inherit">
+                        {/* <a href="#home">Home</a> */}
                         <a href="#today">Today</a>
                         <a href="#forecast">Forecast</a>
                         <a href="#radar">Radar</a>
