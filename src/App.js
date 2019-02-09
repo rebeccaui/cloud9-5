@@ -23,6 +23,7 @@ class App extends Component {
       weatherArray: [],
       zipcode: '',
       coordinates: {},
+      todaySummary: {},
       todayCurrentTemp: '',
       todayHigh: '',
       todayLow: '',
@@ -49,7 +50,7 @@ class App extends Component {
   }
 
   handleSubmit(event) {
-    alert('A zipcode was submitted: ' + this.state.zipcode);
+    console.log('A zipcode was submitted: ' + this.state.zipcode);
     event.preventDefault();
     this.getWeather();
   }
@@ -61,6 +62,7 @@ class App extends Component {
       for(let i = 0; i < res.data.length; i++) {
         this.state.weatherArray.push({
           coordinates: res.data[i].coord,
+          todaySummary: res.data[i].main.weather,
           todayCurrentTemp: res.data[i].main.temp,
           todayHigh: res.data[i].main.temp_max,
           todayLow: res.data[i].main.temp_min,
@@ -68,6 +70,10 @@ class App extends Component {
           todayHumidity: res.data[i].main.humidity
         })
       }
+      // Display Today's Weather
+
+      // Display 5-Day Forecast
+      // Display Radar
     })
   }
 
