@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 h1 {
   font-size: 50px;
 }
@@ -10,9 +13,37 @@ h1 {
   /* height: 40vmin; */
   max-width: 300px;
   margin: auto;
-  padding: 100px 0 20px;
+  padding: 120px 0 20px;
 }
-
+.topNav header {
+  background-color: #fff;
+}
+.topNav h2 {
+  margin: auto;
+}
+.topNav h2 a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: #1483c2;
+  -webkit-transition: all 500ms; /* Safari */
+  transition: all 500ms;
+}
+.topNav h2 a:hover, .topNav h2 a:active, .topNav h2 a:focus {
+  color: #555;
+  text-shadow: 0.5px 0.5px 1px #555;
+  -webkit-transition: all 500ms; /* Safari */
+  transition: all 500ms;
+}
+.topNav {
+  position: fixed;
+  width: 100%;
+}
+.topNavBorder.bottomBorder {
+  margin: 0;
+  background-image: url('./cloud-separator-menu.png');
+  position: fixed;
+  top: 64px;
+}
 .topBorder {
   background-image: url('./cloud-separator-top.jpg');
   display: block;

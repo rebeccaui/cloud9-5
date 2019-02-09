@@ -95,6 +95,7 @@ class App extends Component {
     return (
       <div className="cloud95">
         <NavBar />
+        <div className="topNavBorder bottomBorder"></div>
         <header className="cloud95-home" id="home">
           <img src={logo} className="cloud95-logo" alt="logo" />
           <h1>Cloud 9-5</h1>
@@ -120,20 +121,20 @@ class App extends Component {
           <div className="bottomBorder"></div>
         </div>
 
-        <div className="cloud95-forecast">
+        <div className="cloud95-forecast" id="forecast">
           forecast
 
           <div className="topBorder"></div>
         </div>
 
 
-        <div className="cloud95-radar">
+        <div className="cloud95-radar" id="radar">
           radar
           <div className="bottomBorder"></div>
         </div>
 
 
-        <div className="cloud95-puns">
+        <div className="cloud95-puns" id="puns">
           puns
           <div className="topBorder"></div>
         </div>
