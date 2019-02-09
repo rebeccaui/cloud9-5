@@ -1,18 +1,77 @@
+html {
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6, body {
+  font-family: Helvetica, Arial, sans-serif;
+}
 h1 {
   font-size: 50px;
+}
+.zipForm label {
+  font-size: 14px;
+  padding-right: 6px;
+}
+.zipForm #field {
+  margin-right: 6px;
+  border-radius: 5px;
+  border-color: #ddd;
+  border-width: 1px;
+  border-image: none;
+  border-style: solid;
+}
+.zipForm #submit {
+  border-radius: 5px;
+  border-color: #ddd;
+  color: #1483c2;
+  display: block;
+  margin: 10px auto 0;
+  font-weight: bold;
+  padding: 1px 7px;
+  line-height: 14px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 .cloud95 {
   text-align: center;
 }
-
 .cloud95-logo {
   /* animation: App-logo-spin infinite 20s linear; */
   /* height: 40vmin; */
   max-width: 300px;
   margin: auto;
-  padding: 100px 0 20px;
+  padding: 120px 0 20px;
 }
-
+.topNav header {
+  background-color: #fff;
+}
+.topNav h2 {
+  margin: auto;
+}
+.topNav h2 a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: #1483c2;
+  -webkit-transition: all 500ms; /* Safari */
+  transition: all 500ms;
+}
+.topNav h2 a:hover, .topNav h2 a:active, .topNav h2 a:focus {
+  color: #555;
+  text-shadow: 0.5px 0.5px 1px #555;
+  -webkit-transition: all 500ms; /* Safari */
+  transition: all 500ms;
+}
+.topNav {
+  position: fixed;
+  width: 100%;
+}
+.navBar {
+  height: 64px !important;
+}
+.topNavBorder.bottomBorder {
+  margin: 0;
+  background-image: url('./cloud-separator-menu.png');
+  position: fixed;
+  top: 64px;
+}
 .topBorder {
   background-image: url('./cloud-separator-top.jpg');
   display: block;

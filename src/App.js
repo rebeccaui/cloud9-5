@@ -104,17 +104,18 @@ class App extends Component {
     return (
       <div className="cloud95">
         <NavBar />
+        <div className="topNavBorder bottomBorder"></div>
         <header className="cloud95-home" id="home">
           <img src={logo} className="cloud95-logo" alt="logo" />
           <h1>Cloud 9-5</h1>
           <p><strong>Weather, you like it or not?!</strong></p>
           <br />
-          <form onSubmit={this.handleSubmit}>
+          <form className="zipForm" onSubmit={this.handleSubmit}>
               <label>
                 Zip Code: 
-                <input type="text" value={this.state.zipcode} onChange={this.handleChange} />
               </label>
-              <input type="submit" value="Submit" />
+              <input id="field" type="text" value={this.state.zipcode} onChange={this.handleChange} />
+              <input id="submit" type="submit" value="Submit" />
             </form>
 
           <div className="topBorder"></div>
@@ -129,20 +130,20 @@ class App extends Component {
           <div className="bottomBorder"></div>
         </div>
 
-        <div className="cloud95-forecast">
+        <div className="cloud95-forecast" id="forecast">
           forecast
 
           <div className="topBorder"></div>
         </div>
 
 
-        <div className="cloud95-radar">
+        <div className="cloud95-radar" id="radar">
           radar
           <div className="bottomBorder"></div>
         </div>
 
 
-        <div className="cloud95-puns">
+        <div className="cloud95-puns" id="puns">
           puns
           <div className="topBorder"></div>
         </div>
