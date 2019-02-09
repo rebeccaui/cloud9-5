@@ -86,7 +86,7 @@ class App extends Component {
       }
       console.log('weather results bullshit');
       console.log(res);
-      // console.log(res.data.weather[0].icon); // grabs result icon #
+      console.log(res.data.weather[0].icon); // grabs result icon #
       console.log(this.state.weatherArray);
     })
   }
