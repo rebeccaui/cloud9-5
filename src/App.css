@@ -112,9 +112,28 @@ h1 {
   max-width: 100%;
   margin: auto;
 }
-
-
-
+.todayCardTitle {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #ddd;
+  margin: -16px -16px 10px;
+  padding: 16px;
+  background-color: rgba(20,131,194,0.5);
+  color: #fff;
+}
+.todayCardTitle img, .todayCardTitle span, .todayCardTitle div {
+  width: 33.33%;
+}
+#temp {
+  font-size: 30px;
+}
+#cityTemp #city {
+  display: block;
+  margin: auto;
+}
+#cityTemp #high, #cityTemp #low {
+  font-size: 12px;
+}
 
 /* 
 @keyframes App-logo-spin {
